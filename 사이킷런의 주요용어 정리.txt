@@ -1,6 +1,6 @@
 sklearn.datasets import load_iris
 
-
+가나다
 1.iris 데이터 불러오기
 
 iris = load_iris()
