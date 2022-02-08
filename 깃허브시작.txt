@@ -1,0 +1,116 @@
+중요 파일명령어
+
+cd
+
+cd ..
+
+
+
+
+
+
+
+git허브 시작하기
+
+1. cd를 통해서 로컬저장소를 만들 위치로 이동한다.
+>cd 파일명/
+
+cd Documents/
+cd box_cat/
+
+2. git init을 입력해서 깃을 시작하기위한 로컬 저장소를 만든다.
+
+3. ls를 쳐서 현재에 위치에 있는 파일을 확인
+
+3.1 ls -al를 입력하여서 숨겨진 파일까지 (이때 한칸뛰고 -al)
+
+
+
+#첫번째 버전만들기
+
+1. 사용자정보 등록하기
+git config --global user.name "이름"
+
+>git config --global user.name "young woo choi"
+
+1.1 이메일정보 등록
+
+git config --global user.email 이메일주소
+>git config --global user.email bluesky1996@naver.com
+
+
+
+2.원하는 파일 선택하기 - git add
+>git add README.md
+>아무명령어도 나오지 않으면 성공이다.
+
+3.git commit를 이용해서 첫번째 commit만들기
+
+git commit -m "입력할 문장" (이때 -m은 메시지를 의미한다)
+
+3.1 생성한 commit확인하기 - git log
+
+
+
+#만든버전 github에 올리기
+
+1. new repository생성
+
+2.만든 원격저장소의 주소를 git에 알려주기
+
+git remote add origin ""없이 주소
+
+>git remote add origin https://github.com/hsk5/boxing
+
+
+4.(중요) 만든 commit을 깃허브에 밀어넣기(push)
+git push origin master
+
+>이때 personal token이 필요하다고 나오는데 이때는 깃허브에서 setting에 들어가서 다시 developer setting에 들어가면 personal token이 나오는데 generate를 해서 토큰을 만들어서 그것을 쓰면된다.
+
+https://jootc.com/p/201905122828 참조
+
+현재토큰(3월까지 가능)
+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
+
+push되었다면 몇개의 항목이 done이 되었다고 나오면서 깃허브에 들가면 추가된걸 확인가능 하다.
+
+
+#원격저장소의 데이터를 가져오기 - clone과 pull
+
+1. 데이터를 가져오기 clone
+
+git clone 주소 . (주소를 입력하고 한칸띄우고 .를 넣어야 그 안에 바로 만들어진다. 안그러면 폴더안에 폴더가 만들어지면서 clone된다.)
+
+git clone https://github.com/hsk5/boxing .
+
+
+
+2. 누가 그 데이터를 업데이드해서 푸시한경우에 내 저장소에 다시 업데이트하기 - pull 풀땡긴다.
+
+git pull origin master
+
+
+
+
+
+요약
+
+우선) 로컬저장소 -git init
+
+git add 파일명  > 파일을commit할 준비
+
+git commit -m "메시지"  >> 파일을 커밋함
+
+git push origin master - 만든 파일을 깃에 올림
+
+git pull origin master - 만든 파일을 내 저장소에 업데이트
+
+
+
+
+fatal: not a git repository (or any of the parent directories):
+>로컬 저장소 초기화가 필요하다
+
+>>기존의 프로젝트의 경우 거기에 로컬저장소가 있으니 init을 하지말고 clone으로 가져온다. (이때 뒤에 .이 필요하다)
+
