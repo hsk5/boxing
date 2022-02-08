@@ -1,0 +1,44 @@
+가상환경 (python -m venv, activate)
+
+패키지 설치 및 확인 (pip list, pip install)
+
+
+1. 가상환경 만들기
+
+명령어 python -m venv 파일이름(""없음)
+>python -m venv p_study
+
+
+2. 가상환경 실행
+
+p_study의 Script로 가서 activate을 하면 (p_study)가 뜬다.
+
+>cd Scripts/activate
+
+
+2.1 가상환경 종료
+>deactivate.bat
+
+3. 가상환경에서 에디터 실행 
+>그냥 atom입력
+>atom이 나온다.
+
+
+
+4.패키지 설치(가상환경 상태)
+
+패키지 확인 pip list
+
+패키지 설치 pip install 패키지이름
+>pip install pytest
+>pip install pendulum
+
+위치는 p_study에 library에 패키지에 있음
+
+아톰 환경설정 
+
+
+ctrl + shift + b > script 실행단축키
+
+ctrl + alt + t > 파일 테스트
+
